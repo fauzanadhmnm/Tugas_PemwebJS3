@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+a {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    padding: 1em;
+    border-radius: 2em;
+}
+
+.container {
+    width: 300px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+
+
+input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 25px;
+}
+
+button {
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    text-transform: uppercase;
+}

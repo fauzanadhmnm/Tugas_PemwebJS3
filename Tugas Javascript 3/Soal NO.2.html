@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+    <style>
+        #hasil {
+            width: 150px;
+            height: 20px;
+            border: 1px solid black;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset style="background-color: rgb(227, 250, 242);">
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
+        <table>
+            <thead>
+                <tr>
+                    <td>Masukan Nilai</td>
+                    <td>Valas</td>
+                    <td>Nilai Rupiah</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="number" id="masukan" placeholder="Masukan Jumlah">
+                    </td>
+                    <td>
+                        <select name="" id="kurs" onclick="hitung()">
+                            <option value="usd">Dollar US</option>
+                            <option value="sgd">Dollar Singapore</option>
+                            <option value="rgt">Ringgit Malaysia</option>
+                            <option value="yen">Yen Jepang</option>
+                            <option value="eur">Euro</option>
+                            <option value="ryl">Riyal Arab Saudi</option>
+                        </select>
+                    </td>
+                    <td>
+                        <p id="hasil"></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+
+
+    <script>
+        let input = document.getElementById("masukan")
+        let kurs = document.getElementById("kurs")
+        let result = document.getElementById("hasil")
+
+        function hitung() {
+            if (kurs.value == "usd") {
+                result.innerHTML = "Rp." + parseInt(input.value) * 9915;
+            }
+
+            else if (kurs.value == "eur") {
+                result.innerHTML = "Rp." + parseInt(input.value) * 15888;
+            }
+
+            else if (kurs.value == "sgd") {
+                result.innerHTML = "Rp." + parseInt(input.value) * 13472;
+            }
+
+            else if (kurs.value == "rgt") {
+                result.innerHTML = "Rp." + parseInt(input.value) * 874;
+            }
+
+            else if (kurs.value == "yen") {
+                result.innerHTML = "Rp." + parseInt(input.value) * 120;
+            }
+
+            else if (kurs.value == "ryl") {
+                result.innerHTML = "Rp." + parseInt(input.value) * 3592;
+            }
+        }
+    </script>
+</body>
+
+</html>

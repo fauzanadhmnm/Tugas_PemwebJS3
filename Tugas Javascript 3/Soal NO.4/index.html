@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+
+</head>
+
+<body>
+    <select name="" id="daftar" onchange="tampil()">
+        <option value=""> Pilih Hewan </option>
+        <option value="banteng">banteng</option>
+        <option value="rakun">rakun</option>
+    </select>
+    <div id="hasil"></div>
+
+    <script>
+        let daftar = document.getElementById("daftar")
+        let hasil = document.getElementById("hasil")
+
+        function tampil() {
+            switch (daftar.value) {
+                case "banteng":
+                    hasil.innerHTML = '<img src="img/banteng.jpg" alt"">'
+                    alert("Ini Gambar Hewwan Banteng")
+
+                    break;
+
+                case "rakun":
+                    hasil.innerHTML = '<img src="img/rakun.jpg" alt"">'
+                    alert("Ini Gambar Hewwan Rakun")
+
+                    break;
+
+                default:
+                    hasil.innerHTML = "Pilih hewan yang tersedia"
+
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
